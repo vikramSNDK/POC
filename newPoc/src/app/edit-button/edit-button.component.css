@@ -1,0 +1,29 @@
+.editBtn {
+    padding: 10px 18px; /* Slightly larger padding for better clickability */
+    font-size: 14px;
+    font-weight: bold; /* Makes the text more readable */
+    border: none;
+    border-radius: 6px; /* Slightly increased for a softer look */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+    background-color: #007BFF; /* Modern blue shade */
+    color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    text-transform: uppercase; /* Makes the text more professional */
+    /* letter-spacing: 1px; Slightly improves readability */
+}
+
+.editBtn:hover {
+    background-color: #0056b3; /* A darker shade of blue for contrast */
+    transform: translateY(-2px); /* Slight elevation effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.editBtn:active {
+    transform: translateY(0); /* Pressing the button feels natural */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.editBtn:focus {
+    outline: 2px solid #80bdff; /* Light blue focus ring for accessibility */
+}

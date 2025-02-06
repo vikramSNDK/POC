@@ -1,0 +1,44 @@
+<div class="form-container">
+  <label for="name">Name:</label>
+  <input id="name" [(ngModel)]="newRow.Name" type="text" placeholder="Enter Name">
+
+  <label for="Age">Age:</label>
+  <input id="Age" [(ngModel)]="newRow.Age" type="number" placeholder="Enter Age">
+
+  <label for="Year">Year:</label>
+  <input id="Year" [(ngModel)]="newRow.Year" type="number" placeholder="Enter Year">
+
+  <button class="add-btn" (click)="onAdd()">ADD a new row of Data</button>
+</div>
+<div class="quick-filter">
+  <span>Quick Filter:</span>
+  <input 
+    type="text" 
+    id="filter-text-box" 
+    placeholder="Filter..."
+    (input)="onApplyingFilter()"
+  />
+  <ag-grid-angular
+        class="ag-theme-alpine"
+        id="ag-grid-mygrid"
+        [rowData]="rowData"
+        [columnDefs]="colDefs" 
+        [defaultColDef]="defaultColDef" 
+        [rowSelection]="'multiple'"
+        [suppressHorizontalScroll]="true"
+        [enableAdvancedFilter]="true"
+        [pagination]="true"
+        [paginationPageSize]="paginationPageSize"
+        [paginationPageSizeSelector]="paginationPageSizeSelector"
+        (gridReady)="onGridReady($event)"
+        
+  />
+
+  <!-- style="margin: 5px; height: 460px; width: 100%;" -->
+
+ </div>
+ <div class="button-container">
+  <button class="delete-btn" (click)="onDelete()">DELETE</button>
+ </div>
+
+<router-outlet />
